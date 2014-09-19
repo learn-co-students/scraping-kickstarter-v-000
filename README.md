@@ -219,7 +219,7 @@ Since the data on Kickstarter will change from minute to minute, this project co
 
 ### Setting Up Our Project
 
-Since we'll be using that `kickstarter.html` file instead of an Open-URI request, we can actually remove the `require 'open-uri'` line from `kickstarter_scraper.rb`. Next, let's set up some variables:
+Since we'll be using that `kickstarter.html` file instead of an Open-URI request, we can actually remove the `require 'open-uri'` line from `kickstarter_scraper.rb`. Next, let's set up some variables inside the method called `create_project_hash`:
 
 ```ruby
 # This just opens a file and reads it into a variable
@@ -374,14 +374,16 @@ require 'pry'
 # location: project.css("ul.project-meta span.location-name").text
 # percent_funded: project.css("ul.project-stats li.first.funded strong").text.gsub("%","").to_i
 
-html = File.read('fixtures/kickstarter.html')
-kickstarter = Nokogiri::HTML(html)
+def create_project_hash
+  html = File.read('fixtures/kickstarter.html')
+  kickstarter = Nokogiri::HTML(html)
 
-projects = {}
+  projects = {}
 
-# Iterate through the projects
-kickstarter.css("li.project.grid_4").each do |project|
-  projects[project] = {}
+  # Iterate through the projects
+  kickstarter.css("li.project.grid_4").each do |project|
+    projects[project] = {}
+  end
 end
 ```
 
@@ -392,11 +394,13 @@ Ok, so that won't work, actually. That's going to make some really wacky key whi
 
 ...
 
-projects = {}
+def create_project_hash
+  projects = {}
 
-kickstarter.css("li.project.grid_4").each do |project|
-  title = project.css("h2.bbcard_name strong a").text.to_sym
-  projects[title] = {}
+  kickstarter.css("li.project.grid_4").each do |project|
+    title = project.css("h2.bbcard_name strong a").text
+    projects[title] = {}
+  end
 end
 ```
 
@@ -417,19 +421,21 @@ require 'pry'
 # location: project.css("ul.project-meta span.location-name").text
 # percent_funded: project.css("ul.project-stats li.first.funded strong").text.gsub("%","").to_i
 
-html = File.read('fixtures/kickstarter.html')
-kickstarter = Nokogiri::HTML(html)
+def create_project_hash
+  html = File.read('fixtures/kickstarter.html')
+  kickstarter = Nokogiri::HTML(html)
 
-projects = {}
+  projects = {}
 
-kickstarter.css("li.project.grid_4").each do |project|
-  title = project.css("h2.bbcard_name strong a").text.to_sym
-  projects[title] = {
-    :image_link => project.css("div.project-thumbnail a img").attribute("src").value,
-    :description => project.css("p.bbcard_blurb").text,
-    :location => project.css("ul.project-meta span.location-name").text,
-    :percent_funded => project.css("ul.project-stats li.first.funded strong").text.gsub("%","").to_i
-  }
+  kickstarter.css("li.project.grid_4").each do |project|
+    title = project.css("h2.bbcard_name strong a").text
+    projects[title] = {
+      :image_link => project.css("div.project-thumbnail a img").attribute("src").value,
+      :description => project.css("p.bbcard_blurb").text,
+      :location => project.css("ul.project-meta span.location-name").text,
+      :percent_funded => project.css("ul.project-stats li.first.funded strong").text.gsub("%","").to_i
+    }
+  end
 end
 ```
 ## Resources
