@@ -9,7 +9,7 @@ describe "#create_project_hash" do
   end
 
   it "includes at least five projects" do
-    expect(create_project_hash.length).to be > 5
+    expect(create_project_hash.length).to be >= 5
   end
 
   it "project titles point to a hash of info" do
