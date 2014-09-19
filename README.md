@@ -384,6 +384,9 @@ def create_project_hash
   kickstarter.css("li.project.grid_4").each do |project|
     projects[project] = {}
   end
+
+  # return the projects hash
+  projects
 end
 ```
 
@@ -401,6 +404,9 @@ def create_project_hash
     title = project.css("h2.bbcard_name strong a").text
     projects[title] = {}
   end
+
+  # return the projects hash
+  projects
 end
 ```
 
@@ -436,6 +442,9 @@ def create_project_hash
       :percent_funded => project.css("ul.project-stats li.first.funded strong").text.gsub("%","").to_i
     }
   end
+
+  # return the projects hash
+  projects
 end
 ```
 ## Resources
