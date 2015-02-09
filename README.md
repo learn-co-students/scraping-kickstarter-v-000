@@ -247,7 +247,7 @@ This should open it in Chrome. Right click somewhere on the "Moby Dick" project 
 This is awesome. Since this Nokogiri object is just a bunch of nested nodes, and we know how to iterate through a nested data structure, we can use the Ruby we already know to iterate through each of these projects and do stuff with them.
 
 Just to check our assumptions, let's add a `require 'pry'` at the top of our file, and add `binding.pry` after the last line. Then type `ruby kickstarter_scraper.rb` into your terminal. This should drop us into pry, so that we can play around.  
->(If you haven't already done so, now would be the time to make sure you install Pry by running gem install pry from your command line.)
+>If you haven't already done so, now would be the time to make sure you install Pry by running gem install pry from your command line. Also make sure to [Learn About Pry](http://pryrepl.org/)
 
 In pry, type in:
 
