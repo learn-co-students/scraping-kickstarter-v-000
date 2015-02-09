@@ -253,16 +253,7 @@ In pry, type in:
 
 ```
 kickstarter.css("li.project.grid_4").first
-```
-
-***At this point***, you should get the error message  
-`NameError: undefined local variable or method `kickstarter' for main:Object
-from (pry):2:in `<main>'`.  
-
-Can you figure out how to resolve this issue? 
->****HINT****: a variable you are calling is out of scope. You will need to place another binding.pry somewhere within `kickstarter_scrapper.rb` so that you can access the variable you need.  
-
-After you fix this error, re-type `kickstarter.css("li.project.grid_4").first`
+```  
 
 This will select the first `li` with the `project` and `grid_4` classes just so that we can make sure we've chosen our selector's correctly.
 
