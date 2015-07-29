@@ -1,8 +1,4 @@
----
-  tags: scraping, nokogiri, tutorial
-  languages: ruby, html, css
-  resources: 2
----
+
 
 # Scraping Kickstarter
 
