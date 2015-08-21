@@ -92,7 +92,9 @@ In Pry, type:
 project = _
 ```
 
-This will assign that project to a variable, `project` so that we can play around with it.
+This will assign that project to a variable, `project` so that we can play around with it. 
+
+**Reminder:** If your looking at a big chunk of code in Pry that gets cut off at the bottom of your terminal window, you can scroll down with the down arrow key. You can escape the scrolling and go back to entering code in Pry by hitting "q". 
 
 **Top-Tip:** The `variable_name = _` syntax used in Pry will assign the `variable` name to the return value of whatever was executed above. For example: 
 
