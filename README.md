@@ -284,5 +284,5 @@ def create_project_hash
 end
 ```
 
-We did it!
+We did it! Run the test suite and you should see that all of the tests are passing.
 
