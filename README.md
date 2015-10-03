@@ -25,7 +25,7 @@ These individual project hashes will be collected into a larger hash called `pro
 
 In the directory of this project you'll notice a folder called `fixtures`. Inside that folder you'll see a file, `kickstarter.html`. Open up that file and right click anywhere on the page. Select "open in browser" from the menu that appears. 
 
-Ta-da! We're looking at a web page. For the purposes of this lab, we won't be scraping a live web page. We'll be scrapping this HTML page. We're doing this for two reasons. First, because web pages change. If we assign you a lab based on material that will change, things could get really confusing. Secondly, it is common to keep data that the test suite will use to test your program in a `fixtures` directory. 
+Ta-da! We're looking at a web page. For the purposes of this lab, we won't be scraping a live web page. We'll be scraping this HTML page. We're doing this for two reasons. First, because web pages change. If we assign you a lab based on material that will change, things could get really confusing. Secondly, it is common to keep data that the test suite will use to test your program in a `fixtures` directory. 
 
 So, for this lab, we *don't need Open-Uri*. We're not opening a live web page. 
 
