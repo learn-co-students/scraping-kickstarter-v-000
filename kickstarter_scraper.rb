@@ -15,6 +15,6 @@ def create_project_hash
   	:location => x.css("ul.project-meta li a span.location-name").text,
   	:percent_funded => x.css("ul.project-stats li.first.funded strong").text.gsub(/%/,"").to_i
   	}
-  	
+  end
   projects
 end
