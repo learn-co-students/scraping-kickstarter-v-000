@@ -1,0 +1,10 @@
+
+[1mFrom:[0m /home/nitrous/code/labs/scraping-kickstarter-v-000/kickstarter_scraper.rb @ line 8 Object#create_project_hash:
+
+    [1;34m4[0m: [32mdef[0m [1;34mcreate_project_hash[0m
+    [1;34m5[0m:   html = [1;34;4mFile[0m.read([31m[1;31m'[0m[31mfixtures/kickstarter.html[1;31m'[0m[31m[0m)
+    [1;34m6[0m: 
+    [1;34m7[0m:   kickstarter = [1;34;4mNokogiri[0m::HTML(html)
+ => [1;34m8[0m:   binding.pry
+    [1;34m9[0m: [32mend[0m
+
