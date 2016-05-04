@@ -1,6 +1,5 @@
 # require libraries/modules here
 require 'nokogiri'
-require 'pry'
 
 # PROJECTS: kickstarter.css("li.project.grid_4")
 # TITLE: project.css("h2.bbcard_name strong a").text
@@ -25,7 +24,7 @@ def create_project_hash
     }
   end
 
-  projects
+  puts projects
 end
 
 create_project_hash
