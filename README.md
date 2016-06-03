@@ -7,27 +7,34 @@
 
 ## Overview
 
-In this lab, you'll be scraping a Kickstarter web page that lists projects requesting funding. The page you'll be scraping displays 20 previews of projects in the NYC area. Each project has a title, an image, a short description, a location and some funding details. Our goal is to collect this information for each project and build a hash for each project: 
+In this lab, you'll be scraping a Kickstarter web page that lists projects requesting funding. The page you'll be scraping displays 20 previews of projects in the NYC area. Each project has a title, an image, a short description, a location and some funding details. Our goal is to collect this information for each project and build a hash for each project:
 
 ```ruby
-:project => {
-  :title => "Title",
-  :image_link => "Image Link",
-  :description => "Description",
-  :location => "Location",
-  :percent_funded => "Percent Funded"
+:projects => {
+  "My Great Project"  => {
+    :image_link => "Image Link",
+    :description => "Description",
+    :location => "Location",
+    :percent_funded => "Percent Funded"
+  },
+  "Another Great Project" => {
+    :image_link => "Image Link",
+    :description => "Description",
+    :location => "Location",
+    :percent_funded => "Percent Funded"
+  }
 }
 ```
 
-These individual project hashes will be collected into a larger hash called `projects`. 
+These individual project hashes will be collected into a larger hash called `projects`.
 
 ## Fixtures
 
-In the directory of this project you'll notice a folder called `fixtures`. Inside that folder you'll see a file, `kickstarter.html`. Open up that file and right click anywhere on the page. Select "open in browser" from the menu that appears. 
+In the directory of this project you'll notice a folder called `fixtures`. Inside that folder you'll see a file, `kickstarter.html`. Open up that file and right click anywhere on the page. Select "open in browser" from the menu that appears.
 
-Ta-da! We're looking at a web page. For the purposes of this lab, we won't be scraping a live web page. We'll be scraping this HTML page. We're doing this for two reasons. First, because web pages change. If we assign you a lab based on material that will change, things could get really confusing. Secondly, it is common to keep data that the test suite will use to test your program in a `fixtures` directory. 
+Ta-da! We're looking at a web page. For the purposes of this lab, we won't be scraping a live web page. We'll be scraping this HTML page. We're doing this for two reasons. First, because web pages change. If we assign you a lab based on material that will change, things could get really confusing. Secondly, it is common to keep data that the test suite will use to test your program in a `fixtures` directory.
 
-So, for this lab, we *don't need Open-Uri*. We're not opening a live web page. 
+So, for this lab, we *don't need Open-Uri*. We're not opening a live web page.
 
 ## Instructions
 
@@ -54,7 +61,7 @@ The first thing we'll want to do is figure out what selector will allow us to gr
 open fixtures/kickstarter.html
 ```
 
-in the terminal, or by right clicking on the file and selecting "open in browser". 
+in the terminal, or by right clicking on the file and selecting "open in browser".
 
 This should open the file in your web browser. Right click somewhere on the "Moby Dick" project and choose "Inspect Element". By moving your mouse up and down in the HTML in the inspector, you can see what each element represents on the page via some cool highlighting. By moving your mouse around, it quickly becomes clear that each project is contained in:
 
@@ -64,13 +71,13 @@ This should open the file in your web browser. Right click somewhere on the "Mob
 
 Since this Nokogiri object is just a bunch of nested nodes, and we know how to iterate through a nested data structure, we can use the Ruby we already know to iterate through each of these projects and do stuff with them.
 
-Just to check our assumptions, let's add a `require 'pry'` at the top of our file, and add `binding.pry` after the last line. Call the `create_project_hash` method at the bottom of the file. Then type `ruby kickstarter_scraper.rb` into your terminal. This should drop us into Pry, so that we can play around.  
+Just to check our assumptions, let's add a `require 'pry'` at the top of our file, and add `binding.pry` after the last line. Call the `create_project_hash` method at the bottom of the file. Then type `ruby kickstarter_scraper.rb` into your terminal. This should drop us into Pry, so that we can play around.
 
 In pry, type in:
 
 ```
 kickstarter.css("li.project.grid_4").first
-```  
+```
 
 This will select the first `li` with the `project` and `grid_4` classes just so that we can make sure we've chosen our selectors correctly.
 
@@ -92,11 +99,11 @@ In Pry, type:
 project = _
 ```
 
-This will assign that project to a variable, `project` so that we can play around with it. 
+This will assign that project to a variable, `project` so that we can play around with it.
 
-**Reminder:** If your looking at a big chunk of code in Pry that gets cut off at the bottom of your terminal window, you can scroll down with the down arrow key. You can escape the scrolling and go back to entering code in Pry by hitting "q". 
+**Reminder:** If you're looking at a big chunk of code in Pry that gets cut off at the bottom of your terminal window, you can scroll down with the down arrow key. You can escape the scrolling and go back to entering code in Pry by hitting "q".
 
-**Top-Tip:** The `variable_name = _` syntax used in Pry will assign the `variable` name to the return value of whatever was executed above. For example: 
+**Top-Tip:** The `variable_name = _` syntax used in Pry will assign the `variable` name to the return value of whatever was executed above. For example:
 
 ```bash
 $ pry > 1 + 1
@@ -141,11 +148,11 @@ It worked! Now, let's continue to keep track of our working code in our project 
 
 #### A Note on `.attribute`
 
-An image tag in HTML is considered to have a source attribute. In the following example 
+An image tag in HTML is considered to have a source attribute. In the following example
 
-`<img src="http://www.example.com/pic.jpg">` 
+`<img src="http://www.example.com/pic.jpg">`
 
-the source attribute would be `"http://www.example.com/pic.jpg"`. You can use the `.attribute` method on a Nokogiri element to grab the value of that attribute. 
+the source attribute would be `"http://www.example.com/pic.jpg"`. You can use the `.attribute` method on a Nokogiri element to grab the value of that attribute.
 
 ### Selecting the Description
 
@@ -155,7 +162,7 @@ Are you starting to see a pattern here? We click around a bit in the Chrome web 
 project.css("p.bbcard_blurb").text
 ```
 
-This should return the description of an individual project. 
+This should return the description of an individual project.
 
 Let's add that to `kickstarter_scraper.rb`:
 
@@ -168,7 +175,7 @@ Let's add that to `kickstarter_scraper.rb`:
 
 ### Selecting the Location
 
-Do you think you can figure this one out on your own? Examine the web page and then play around in Pry. Try to find the right selector for an individual project's location. 
+Do you think you can figure this one out on your own? Examine the web page and then play around in Pry. Try to find the right selector for an individual project's location.
 
 ### Selecting the Percent Funded
 
@@ -246,7 +253,7 @@ def create_project_hash
 end
 ```
 
-That's better. You'll notice that I'm also converting the title into a symbol using the `to_sym` method. Remember that symbols make better hash keys than strings.
+That's better. You'll notice that we're converting the title into a symbol using the `to_sym` method. Remember that symbols make better hash keys than strings.
 
 Finally, it's just a matter of grabbing each of the data points using the selectors we've already figured out, and adding them to each project's hash. So, our complete code will look something like this:
 
@@ -271,7 +278,7 @@ def create_project_hash
 
   kickstarter.css("li.project.grid_4").each do |project|
     title = project.css("h2.bbcard_name strong a").text
-    projects[title] = {
+    projects[title.to_sym] = {
       :image_link => project.css("div.project-thumbnail a img").attribute("src").value,
       :description => project.css("p.bbcard_blurb").text,
       :location => project.css("ul.project-meta span.location-name").text,
@@ -286,3 +293,7 @@ end
 
 We did it! Run the test suite and you should see that all of the tests are passing.
 
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/scraping-kickstarter' title='Scraping Kickstarter'>Scraping Kickstarter</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/scraping-kickstarter'>Kickstarter Scraping Lab</a> on Learn.co and start learning to code for free.</p>
