@@ -253,7 +253,7 @@ def create_project_hash
 end
 ```
 
-That's better. You'll notice that I'm also converting the title into a symbol using the `to_sym` method. Remember that symbols make better hash keys than strings.
+That's better. You'll notice that we're converting the title into a symbol using the `to_sym` method. Remember that symbols make better hash keys than strings.
 
 Finally, it's just a matter of grabbing each of the data points using the selectors we've already figured out, and adding them to each project's hash. So, our complete code will look something like this:
 
@@ -295,3 +295,5 @@ We did it! Run the test suite and you should see that all of the tests are passi
 
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/scraping-kickstarter' title='Scraping Kickstarter'>Scraping Kickstarter</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/scraping-kickstarter'>Kickstarter Scraping Lab</a> on Learn.co and start learning to code for free.</p>
