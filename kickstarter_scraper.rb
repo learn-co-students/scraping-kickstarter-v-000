@@ -16,7 +16,7 @@ def create_project_hash
       :location => listing.css(".location-name").text,
       :percent_funded =>  listing.css(".funded").css("strong").text.chop.to_i
     }
-    collection[(listing.css(".bbcard_name").css("a").text)t.to_sym] = project
+    collection[(listing.css(".bbcard_name").css("a").text).to_sym] = project
   end
   #binding.pry
   collection
