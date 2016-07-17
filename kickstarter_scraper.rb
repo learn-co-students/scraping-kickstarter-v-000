@@ -20,10 +20,10 @@ require 'pry'
 
         # Below we grab each of the data points using the selectors we've already figured out, and adding them to each project's hash.
 
-        :image_link => project.css("div.project-thumbnail a img").attribute("src").value,
-        :description => project.css("p.bbcard_blurb").text,
-        :location => project.css("ul.project-meta span.location-name").text,
-        :percent_funded => project.css("ul.project-stats li.first.funded strong").text.gsub("%","").to_i
+        image_link: project.css("div.project-thumbnail a img").attribute("src").value,
+        description: project.css("p.bbcard_blurb").text,
+        location: project.css("ul.project-meta span.location-name").text,
+        percent_funded: project.css("ul.project-stats li.first.funded strong").text.gsub("%","").to_i
       }
     end
     projects
