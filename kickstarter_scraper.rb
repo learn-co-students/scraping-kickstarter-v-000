@@ -19,7 +19,7 @@ require 'pry'
 
     projects = {}
 
-    kickstarter.css("li.project.grid_4").each do |project|
+    kickstarter.css("#projects_list > li:nth-child(1) > div > div").each do |project|
       title = project.css("h2.bbcard_name strong a").text
       projects[title.to_sym] = {
         :image_link => project.css("div.project-thumbnail a img").attribute("src").value,
@@ -27,6 +27,7 @@ require 'pry'
         :location => project.css("ul.project-meta span.location-name").text,
         :percent_funded => project.css("ul.project-stats li.first.funded strong").text.gsub("%","").to_i
       }
+      binding.pry
     end
 
     # return the projects hash
