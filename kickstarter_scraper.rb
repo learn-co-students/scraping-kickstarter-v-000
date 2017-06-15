@@ -1,11 +1,12 @@
 require "nokogiri"
+require "pry"
 
 def create_project_hash
   kickstarter = Nokogiri::HTML(File.read('fixtures/kickstarter.html'))
   project_hash = {}
  
-  kickstarter.css("li.project.grid_4").each do |project|
-    title = project.css("h2").text
+  kickstarter.css("li.project").each do |project|
+    title = project.css("h2.bbcard_name strong a").text
     project_hash[title.to_sym] = {
       image_link: project.css("div.project-thumbnail img").attribute("src").value,
       description: project.css("p.bbcard_blurb").text,
@@ -14,6 +15,7 @@ def create_project_hash
     }
   end
 
+  binding.pry
   project_hash
   
 end
