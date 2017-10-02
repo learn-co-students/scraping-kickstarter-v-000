@@ -13,7 +13,7 @@ def create_project_hash
       :image_link => project.css(".projectphoto-little").attribute("src").value,
       :description => project.css("p.bbcard_blurb").text,
       :location => project.css("span.location-name").text,
-      :percent_funded => project.css("ul.project-stats li.first.funded strong").text.gsub("%", "").to_i
+      :percent_funded => project.css("ul.project-stats li.first.funded strong").text.chomp("%").to_i
     }
   end
   projects
