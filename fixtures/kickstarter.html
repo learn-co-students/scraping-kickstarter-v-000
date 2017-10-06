@@ -36,7 +36,6 @@
   _sift.push(['_setAccount', '637102']);
   _sift.push(['_setUserId', '']);
   _sift.push(['_trackPageview']);
-
   (function() {
     function loadSift() {
       var sift, s;
@@ -77,20 +76,20 @@
     var _sf_startpt=(new Date()).getTime();
     docElement = this.document.documentElement;
     docElement.className=docElement.className.replace(/\bno-js\b/,'') + 'js';
-    
+
     window.timeRemaining = function timeRemaining(epochTime){
-    
+
       var diff = epochTime - ((new Date()).getTime() / 1000);
       var num_unit = (diff < 60 && [Math.max(diff, 0), 'seconds']) ||
         ((diff/=60) < 60 && [diff, 'minutes']) ||
         ((diff/=60) < 72 && [diff, 'hours']) ||
         [diff/=24, 'days'];
-    
+
       // Round down
       num_unit[0] = Math.floor(num_unit[0]);
       // Singularize unit
       if (num_unit[0] == 1) { num_unit[1] = num_unit[1].replace(/s$/,""); }
-    
+
       return num_unit;
     };
   //]]>
@@ -1620,7 +1619,7 @@ Bunnie (Bonnie) Reiss
 </span>
 </h2>
 <p class="bbcard_blurb">
-Welcome to the launch of a mobile artist residency, driven by a drawing campaign of at least 100 original works 
+Welcome to the launch of a mobile artist residency, driven by a drawing campaign of at least 100 original works
 by Bunnie Reiss
 </p>
 <ul class="project-meta">
@@ -2227,7 +2226,6 @@ Kickstarter, Inc.
         <strong>Successful!</strong>
       </div>
     {{/successful?}}
-
     {{#location}}
       <ul class="project-meta">
         <li>
@@ -2238,7 +2236,6 @@ Kickstarter, Inc.
         </li>
       </ul>
     {{/location}}
-
     {{#live_or_successful?}}
       {{#live?}}
         <div class="project-pledged-wrap">
@@ -2268,10 +2265,8 @@ Kickstarter, Inc.
         {{/live?}}
       </ul>
     {{/live_or_successful?}}
-
   </div>
 </div>
-
 {{#friends_backing?}}
   <div class="friend_project_context">
     <div class="friend_facepile">
@@ -2301,7 +2296,6 @@ Kickstarter, Inc.
   {{/ancestor_locations}}
   <option value="{{id}}">{{short_name}}</option>
 </optgroup>
-
 {{#nearby_locations.length}}
   <optgroup label="Nearby locations">
     {{#nearby_locations}}
@@ -2310,7 +2304,6 @@ Kickstarter, Inc.
   </optgroup>
 {{/nearby_locations.length}}
 </script><script class="template" id="template-projects__video_mode" type="text/x-tmpl-mustache"><a href='#' id='video_mode_close' class='close_button'><span class='ss-icon ss-delete'></span></a>
-
 <div class='title_card {{context_classes}}' style="display:none;">
   <div class='interior'>
     <h2 class='project_title normal_weight'>{{name}}</h2>
@@ -2340,13 +2333,11 @@ Kickstarter, Inc.
     </nav>
   </div>
 </div>
-
 <div class='channel_controls'>
   <a href='#' class='{{#playlist_is_location}}selected {{/playlist_is_location}}location'>Something else near {{location.first_name}} <span class='ss-icon ss-navigateright'></span></a>
   <a href='#' class='{{#playlist_is_featured}}selected {{/playlist_is_featured}}featured'>Something different<span class='ss-icon ss-navigateright'></span></a>
   <a href='#' class='{{#playlist_is_category}}selected {{/playlist_is_category}}category'>Something else in {{category.name}} <span class='ss-icon ss-navigateright'></span></a>
 </div>
-
 <div class='project_video' style='background-image: url('{{photo.full}}')'>
   <div class='cover'>
     <video>
@@ -2383,11 +2374,11 @@ Kickstarter, Inc.
   //<![CDATA[
     var channelUrl = window.location.protocol + "//" + window.location.host + "/channel.html",
       just_logged_out = window.$('body').is('.just_logged_out');
-    
+
     window.fbLogoutCallback = function(response) {
       response.status === 'connected' ? FB.logout(fbLogoutCallback) : destroy_cookie("logout_from_fb");
     };
-    
+
     window.fbAsyncInit = function() {
       FB.Event.subscribe('auth.statusChange', function(response) {
         if (response.status === 'connected') {
@@ -2404,7 +2395,7 @@ Kickstarter, Inc.
           }
         }
       });
-    
+
       FB.init({
         appId: '69103156693',
         channelUrl: channelUrl,
@@ -2413,11 +2404,11 @@ Kickstarter, Inc.
         xfbml: true,     // parse XFBML
         logging: false   // turn off logging
       });
-    
+
       $(document).trigger('fb:loaded');
     };
-    
-    
+
+
     // Load the SDK Asynchronously
     (function(d){
       var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
@@ -2431,4 +2422,3 @@ Kickstarter, Inc.
 
 </body>
 </html>
-
