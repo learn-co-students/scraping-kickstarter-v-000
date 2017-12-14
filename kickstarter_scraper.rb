@@ -10,17 +10,22 @@ def create_project_hash
   kickstarter = Nokogiri::HTML(html)
   # each project has the following: 
   project_hash = Hash.new
+  project_array = kickstarter.css(".project")
+  
+#  until project_array.length == 5 do 
+#  project_array.each do |p| 
+  all_projects = Hash.new
     # image:image_link,
-  project_hash["image"] = kickstarter.css(".projectphoto-little").attribute("src").value
-    # title:project_title
-  project_hash["title"] = project_hash["title"] = kickstarter.css(".bbcard_name").first.text
-    # description:string
-  project_hash["description"] = kickstarter.css(".bbcard_blurb").first.text
-    # location:string
-  project_hash["location"] = kickstarter.css(".location-name").first.text
-  
- 
-  
+    project_hash["image"] = kickstarter.css(".projectphoto-little").attribute("src").value
+      # title:project_title
+    project_hash["title"] = kickstarter.css(".bbcard_name").first.text
+      # description:string
+    project_hash["description"] = kickstarter.css(".bbcard_blurb").first.text
+      # location:string
+    project_hash["location"] = kickstarter.css(".location-name").first.text
+    project_hash["percentage"] = kickstarter.css(".first funded").first.text
+   
+
   
 
   # set of key value pairs 
