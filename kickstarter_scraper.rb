@@ -11,12 +11,14 @@ def create_project_hash
   # each project has the following: 
   project_hash = Hash.new
     # image:image_link,
-    project_hash["image"] = kickstarter.css(".projectphoto-little").attribute("src").value
+  project_hash["image"] = kickstarter.css(".projectphoto-little").attribute("src").value
     # title:???
   
     # description:string
-    project_hash["description"] = kickstarter.css(".bbcard_blurb").first.text
+  project_hash["description"] = kickstarter.css(".bbcard_blurb").first.text
     # location:string
+  project_hash["location"] = kickstarter.css(".location-name").first
+  
   binding.pry
   
   
