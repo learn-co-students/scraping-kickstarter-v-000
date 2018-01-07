@@ -1,0 +1,358 @@
+=> [1;34m#(Element:0x11d0d84 {[0m
+  name = [32m"li"[0m[0m,
+  attributes = [
+    [1;34m#(Attr:0x11cce14 {[0m
+      name = [32m"class"[0m[0m,
+      value = [32m"project grid_4"[0m[0m
+      })],
+  children = [
+    [1;34m#(Text [0m[32m"\n"[0m[0m),
+    [1;34m#(Element:0x11bd7ac {[0m
+      name = [32m"div"[0m[0m,
+      attributes = [
+        [1;34m#(Attr:0x11bcd0c {[0m
+          name = [32m"class"[0m[0m,
+          value = [32m"project-card-wrap"[0m[0m
+          }),
+        [1;34m#(Attr:0x11bccf8 {[0m
+          name = [32m"data-project"[0m[0m,
+          value = [32m"{\"id\":473403084}"[0m[0m
+          })],
+      children = [
+        [1;34m#(Text [0m[32m"\n"[0m[0m),
+        [1;34m#(Element:0xee0048 {[0m
+          name = [32m"div"[0m[0m,
+          attributes = [
+            [1;34m#(Attr:0xedb430 {[0m
+              name = [32m"class"[0m[0m,
+              value = [32m"project-card"[0m[0m
+              })],
+          children = [
+            [1;34m#(Text [0m[32m"\n"[0m[0m),
+            [1;34m#(Element:0xef3e04 {[0m
+              name = [32m"div"[0m[0m,
+              attributes = [
+                [1;34m#(Attr:0xef2888 {[0m
+                  name = [32m"class"[0m[0m,
+                  value = [32m"project-thumbnail"[0m[0m
+                  })],
+              children = [
+                [1;34m#(Text [0m[32m"\n"[0m[0m),
+                [1;34m#(Element:0xea1938 {[0m
+                  name = [32m"a"[0m[0m,
+                  attributes = [
+                    [1;34m#(Attr:0xea0268 {[0m
+                      name = [32m"href"[0m[0m,
+                      value = [32m"/projects/289243549/moby-dick-an-oratorio?ref=city"[0m[0m
+                      }),
+                    [1;34m#(Attr:0xea0240 {[0m
+                      name = [32m"target"[0m[0m,
+                      value = [32m""[0m[0m
+                      })],
+                  children = [
+                    [1;34m#(Element:0xe6d700 {[0m
+                      name = [32m"img"[0m[0m,
+                      attributes = [
+                        [1;34m#(Attr:0xe6c42c {[0m
+                          name = [32m"alt"[0m[0m,
+                          value = [32m"Photo-little"[0m[0m
+                          }),
+                        [1;34m#(Attr:0xe6c3f0 {[0m
+                          name = [32m"class"[0m[0m,
+                          value = [32m"projectphoto-little"[0m[0m
+                          }),
+                        [1;34m#(Attr:0xe6c38c {[0m
+                          name = [32m"height"[0m[0m,
+                          value = [32m"150"[0m[0m
+                          }),
+                        [1;34m#(Attr:0xe6c378 {[0m
+                          name = [32m"src"[0m[0m,
+                          value = [32m"https://s3.amazonaws.com/ksr/projects/845788/photo-little.jpg?1391022013"[0m[0m
+                          }),
+                        [1;34m#(Attr:0xe6c364 {[0m
+                          name = [32m"width"[0m[0m,
+                          value = [32m"200"[0m[0m
+                          })]
+                      })]
+                  }),
+                [1;34m#(Text [0m[32m"\n"[0m[0m)]
+              }),
+            [1;34m#(Text [0m[32m"\n"[0m[0m),
+            [1;34m#(Element:0xdbad08 {[0m
+              name = [32m"h2"[0m[0m,
+              attributes = [
+                [1;34m#(Attr:0xdac384 {[0m
+                  name = [32m"class"[0m[0m,
+                  value = [32m"bbcard_name"[0m[0m
+                  })],
+              children = [
+                [1;34m#(Text [0m[32m"\n"[0m[0m),
+                [1;34m#(Element:0xd8bddc {[0m
+                  name = [32m"strong"[0m[0m,
+                  children = [
+                    [1;34m#(Text [0m[32m"\n"[0m[0m),
+                    [1;34m#(Element:0xd54b70 {[0m
+                      name = [32m"a"[0m[0m,
+                      attributes = [
+                        [1;34m#(Attr:0xd4fc38 {[0m
+                          name = [32m"href"[0m[0m,
+                          value = [32m"/projects/289243549/moby-dick-an-oratorio?ref=city"[0m[0m
+                          }),
+                        [1;34m#(Attr:0xd4fc24 {[0m
+                          name = [32m"target"[0m[0m,
+                          value = [32m""[0m[0m
+                          })],
+                      children = [ [1;34m#(Text [0m[32m"Moby Dick: An Oratorio"[0m[0m)]
+                      }),
+                    [1;34m#(Text [0m[32m"\n"[0m[0m)]
+                  }),
+                [1;34m#(Text [0m[32m"\n"[0m[0m),
+                [1;34m#(Element:0xce9410 {[0m
+                  name = [32m"span"[0m[0m,
+                  children = [ [1;34m#(Text [0m[32m"\nby\nW4 New Music\n"[0m[0m)]
+                  }),
+                [1;34m#(Text [0m[32m"\n"[0m[0m)]
+              }),
+            [1;34m#(Text [0m[32m"\n"[0m[0m),
+            [1;34m#(Element:0xbcfe6c {[0m
+              name = [32m"p"[0m[0m,
+              attributes = [
+                [1;34m#(Attr:0xbc942c {[0m
+                  name = [32m"class"[0m[0m,
+                  value = [32m"bbcard_blurb"[0m[0m
+                  })],
+              children = [
+                [1;34m#(Text [0m[32m"\nFour young composers join forces with an indie orchestra to present this musical reflection on a literary masterpiece.\n"[0m[0m)]
+              }),
+            [1;34m#(Text [0m[32m"\n"[0m[0m),
+            [1;34m#(Element:0xb64bbc {[0m
+              name = [32m"ul"[0m[0m,
+              attributes = [
+                [1;34m#(Attr:0xb62740 {[0m
+                  name = [32m"class"[0m[0m,
+                  value = [32m"project-meta"[0m[0m
+                  })],
+              children = [
+                [1;34m#(Text [0m[32m"\n"[0m[0m),
+                [1;34m#(Element:0xa134e8 {[0m
+                  name = [32m"li"[0m[0m,
+                  children = [
+                    [1;34m#(Text [0m[32m"\n"[0m[0m),
+                    [1;34m#(Element:0x11ad460 {[0m
+                      name = [32m"a"[0m[0m,
+                      attributes = [
+                        [1;34m#(Attr:0x11ac920 {[0m
+                          name = [32m"data-location"[0m[0m,
+                          value = [32m"{\"id\":12589335,\"name\":\"Brooklyn\",\"slug\":\"brooklyn-ny\",\"short_name\":\"Brooklyn, NY\",\"displayable_name\":\"Brooklyn, NY\",\"country\":\"US\",\"state\":\"NY\",\"urls\":{\"web\":{\"discover\":\"https://www.kickstarter.com/discover/places/brooklyn-ny\",\"location\":\"https://www.kickstarter.com/locations/brooklyn-ny\"},\"api\":{\"nearby_projects\":\"https://api.kickstarter.com/v1/discover?signature=1392163530.44f66778a1b13738446d3c5f42fcdc20e0ff0b3d&woe_id=12589335\"}}}"[0m[0m
+                          }),
+                        [1;34m#(Attr:0x11ac90c {[0m
+                          name = [32m"href"[0m[0m,
+                          value = [32m"/discover/places/brooklyn-ny?ref=city"[0m[0m
+                          }),
+                        [1;34m#(Attr:0x11ac8f8 {[0m
+                          name = [32m"target"[0m[0m,
+                          value = [32m""[0m[0m
+                          })],
+                      children = [
+                        [1;34m#(Text [0m[32m"\n"[0m[0m),
+                        [1;34m#(Element:0x12bac54 {[0m
+                          name = [32m"span"[0m[0m,
+                          attributes = [
+                            [1;34m#(Attr:0x12ba0b0 {[0m
+                              name = [32m"class"[0m[0m,
+                              value = [32m"ss-icon ss-location"[0m[0m
+                              })]
+                          }),
+                        [1;34m#(Text [0m[32m"\n"[0m[0m),
+                        [1;34m#(Element:0x120e0a8 {[0m
+                          name = [32m"span"[0m[0m,
+                          attributes = [
+                            [1;34m#(Attr:0x11c69c4 {[0m
+                              name = [32m"class"[0m[0m,
+                              value = [32m"location-name"[0m[0m
+                              })],
+                          children = [ [1;34m#(Text [0m[32m"Brooklyn, NY"[0m[0m)]
+                          }),
+                        [1;34m#(Text [0m[32m"\n"[0m[0m)]
+                      }),
+                    [1;34m#(Text [0m[32m"\n"[0m[0m)]
+                  }),
+                [1;34m#(Text [0m[32m"\n"[0m[0m)]
+              }),
+            [1;34m#(Text [0m[32m"\n"[0m[0m),
+            [1;34m#(Element:0x144c9b4 {[0m
+              name = [32m"div"[0m[0m,
+              attributes = [
+                [1;34m#(Attr:0x1449ebc {[0m
+                  name = [32m"class"[0m[0m,
+                  value = [32m"project-pledged-successful"[0m[0m
+                  }),
+                [1;34m#(Attr:0x1449ea8 {[0m
+                  name = [32m"style"[0m[0m,
+                  value = [32m"display: none;"[0m[0m
+                  })],
+              children = [
+                [1;34m#(Text [0m[32m"\n"[0m[0m),
+                [1;34m#(Element:0x142ab84 {[0m
+                  name = [32m"strong"[0m[0m,
+                  children = [ [1;34m#(Text [0m[32m"Successful!"[0m[0m)]
+                  }),
+                [1;34m#(Text [0m[32m"\n"[0m[0m)]
+              }),
+            [1;34m#(Text [0m[32m"\n"[0m[0m),
+            [1;34m#(Element:0x1409e70 {[0m
+              name = [32m"div"[0m[0m,
+              attributes = [
+                [1;34m#(Attr:0x14093f8 {[0m
+                  name = [32m"class"[0m[0m,
+                  value = [32m"project-pledged-wrap"[0m[0m
+                  })],
+              children = [
+                [1;34m#(Text [0m[32m"\n"[0m[0m),
+                [1;34m#(Element:0x13f1ed8 {[0m
+                  name = [32m"div"[0m[0m,
+                  attributes = [
+                    [1;34m#(Attr:0x13f1460 {[0m
+                      name = [32m"class"[0m[0m,
+                      value = [32m"project-pledged"[0m[0m
+                      }),
+                    [1;34m#(Attr:0x13f144c {[0m
+                      name = [32m"style"[0m[0m,
+                      value = [32m"width: 77%"[0m[0m
+                      })]
+                  }),
+                [1;34m#(Text [0m[32m"\n"[0m[0m)]
+              }),
+            [1;34m#(Text [0m[32m"\n"[0m[0m),
+            [1;34m#(Element:0x13c82cc {[0m
+              name = [32m"ul"[0m[0m,
+              attributes = [
+                [1;34m#(Attr:0x13c54a0 {[0m
+                  name = [32m"class"[0m[0m,
+                  value = [32m"project-stats"[0m[0m
+                  })],
+              children = [
+                [1;34m#(Text [0m[32m"\n"[0m[0m),
+                [1;34m#(Element:0x13acd24 {[0m
+                  name = [32m"li"[0m[0m,
+                  attributes = [
+                    [1;34m#(Attr:0x13ac1bc {[0m
+                      name = [32m"class"[0m[0m,
+                      value = [32m"first funded"[0m[0m
+                      })],
+                  children = [
+                    [1;34m#(Text [0m[32m"\n"[0m[0m),
+                    [1;34m#(Element:0x13912b8 {[0m
+                      name = [32m"strong"[0m[0m,
+                      children = [ [1;34m#(Text [0m[32m"77%"[0m[0m)]
+                      }),
+                    [1;34m#(Text [0m[32m"\nfunded\n"[0m[0m)]
+                  }),
+                [1;34m#(Text [0m[32m"\n"[0m[0m),
+                [1;34m#(Element:0x13798e8 {[0m
+                  name = [32m"li"[0m[0m,
+                  attributes = [
+                    [1;34m#(Attr:0x1378e84 {[0m
+                      name = [32m"class"[0m[0m,
+                      value = [32m"pledged"[0m[0m
+                      })],
+                  children = [
+                    [1;34m#(Text [0m[32m"\n"[0m[0m),
+                    [1;34m#(Element:0x1362184 {[0m
+                      name = [32m"strong"[0m[0m,
+                      children = [
+                        [1;34m#(Element:0x134f1d8 {[0m
+                          name = [32m"span"[0m[0m,
+                          attributes = [
+                            [1;34m#(Attr:0x134e670 {[0m
+                              name = [32m"class"[0m[0m,
+                              value = [32m"money usd no-code"[0m[0m
+                              })],
+                          children = [ [1;34m#(Text [0m[32m"$2,772"[0m[0m)]
+                          })]
+                      }),
+                    [1;34m#(Text [0m[32m"\npledged\n"[0m[0m)]
+                  }),
+                [1;34m#(Text [0m[32m"\n"[0m[0m),
+                [1;34m#(Element:0x132f5a4 {[0m
+                  name = [32m"li"[0m[0m,
+                  attributes = [
+                    [1;34m#(Attr:0x132eb2c {[0m
+                      name = [32m"class"[0m[0m,
+                      value = [32m"last successful"[0m[0m
+                      }),
+                    [1;34m#(Attr:0x132eb18 {[0m
+                      name = [32m"style"[0m[0m,
+                      value = [32m"display: none;"[0m[0m
+                      })],
+                  children = [
+                    [1;34m#(Text [0m[32m"\n"[0m[0m),
+                    [1;34m#(Element:0x13090c0 {[0m
+                      name = [32m"strong"[0m[0m,
+                      children = [ [1;34m#(Text [0m[32m"Funded"[0m[0m)]
+                      }),
+                    [1;34m#(Text [0m[32m"\n"[0m[0m),
+                    [1;34m#(Element:0x12f744c {[0m
+                      name = [32m"div"[0m[0m,
+                      attributes = [
+                        [1;34m#(Attr:0x12f69e8 {[0m
+                          name = [32m"class"[0m[0m,
+                          value = [32m"deadline"[0m[0m
+                          })],
+                      children = [ [1;34m#(Text [0m[32m"\n"[0m[0m)]
+                      }),
+                    [1;34m#(Text [0m[32m"\n"[0m[0m)]
+                  }),
+                [1;34m#(Text [0m[32m"\n"[0m[0m),
+                [1;34m#(Element:0x12d1120 {[0m
+                  name = [32m"li"[0m[0m,
+                  attributes = [
+                    [1;34m#(Attr:0x12d0504 {[0m
+                      name = [32m"class"[0m[0m,
+                      value = [32m"last ksr_page_timer"[0m[0m
+                      }),
+                    [1;34m#(Attr:0x12d04f0 {[0m
+                      name = [32m"data-end_time"[0m[0m,
+                      value = [32m"2014-02-20T23:59:00-05:00"[0m[0m
+                      })],
+                  children = [
+                    [1;34m#(Text [0m[32m"\n"[0m[0m),
+                    [1;34m#(Element:0x12a6b50 {[0m
+                      name = [32m"strong"[0m[0m,
+                      children = [
+                        [1;34m#(Text [0m[32m"\n"[0m[0m),
+                        [1;34m#(Element:0x1290c10 {[0m
+                          name = [32m"div"[0m[0m,
+                          attributes = [
+                            [1;34m#(Attr:0x128dab0 {[0m
+                              name = [32m"class"[0m[0m,
+                              value = [32m"num"[0m[0m
+                              })],
+                          children = [ [1;34m#(Text [0m[32m"\u00A0"[0m[0m)]
+                          }),
+                        [1;34m#(Text [0m[32m"\n"[0m[0m)]
+                      }),
+                    [1;34m#(Text [0m[32m"\n"[0m[0m),
+                    [1;34m#(Element:0x1266910 {[0m
+                      name = [32m"div"[0m[0m,
+                      attributes = [
+                        [1;34m#(Attr:0x1265d1c {[0m
+                          name = [32m"class"[0m[0m,
+                          value = [32m"span text"[0m[0m
+                          }),
+                        [1;34m#(Attr:0x1265d08 {[0m
+                          name = [32m"data-word"[0m[0m,
+                          value = [32m"left"[0m[0m
+                          })],
+                      children = [ [1;34m#(Text [0m[32m"\u00A0"[0m[0m)]
+                      }),
+                    [1;34m#(Text [0m[32m"\n"[0m[0m)]
+                  }),
+                [1;34m#(Text [0m[32m"\n"[0m[0m)]
+              }),
+            [1;34m#(Text [0m[32m"\n\n"[0m[0m)]
+          }),
+        [1;34m#(Text [0m[32m"\n"[0m[0m)]
+      }),
+    [1;34m#(Text [0m[32m"\n\n"[0m[0m)]
+  })
