@@ -1,3 +1,10 @@
+RUN LEARN:
+  gem uninstall nokogiri
+  bundle install
+
+RUN RUBY:
+  gem install nokogiri -- --use-system-libraries
+
 # Scraping Kickstarter
 
 ## Objectives
