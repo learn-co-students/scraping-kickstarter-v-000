@@ -1,0 +1,15 @@
+
+[1mFrom:[0m /home/nitrous/code/labs/scraping-kickstarter-v-000/kickstarter_scraper.rb @ line 14 :
+
+     [1;34m9[0m:   project = kickstarter.css([31m[1;31m"[0m[31mli.project.grid_4[1;31m"[0m[31m[0m)
+    [1;34m10[0m:   [1;34m# title: project.css("h2.bbcard_name strong a").text[0m
+    [1;34m11[0m:   project.css([31m[1;31m"[0m[31mdiv.project-thumbnail a img[1;31m"[0m[31m[0m).attribute([31m[1;31m"[0m[31msrc[1;31m"[0m[31m[0m).value
+    [1;34m12[0m: [32mend[0m
+    [1;34m13[0m: 
+ => [1;34m14[0m: binding.pry
+    [1;34m15[0m: 
+    [1;34m16[0m: 
+    [1;34m17[0m: 
+    [1;34m18[0m: 
+    [1;34m19[0m: 
+
