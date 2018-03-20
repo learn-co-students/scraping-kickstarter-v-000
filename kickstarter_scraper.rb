@@ -5,28 +5,14 @@ require 'open-uri'
 
 def create_project_hash
   result = {}
-  xml_projects = Nokogiri::HTML(File.read("./fixtures/kickstarter.html"))
-  xml_projects.css(".project-card").each do |project|
-    # binding.pry
-    result[:image_link] = project.css(".project-thumbnail a img")[0].attributes['src'].value
-    # result.schedule = post.css(".date").text
-    # result.description = post.css("p").text
+  projects = Nokogiri::HTML(File.read("./fixtures/kickstarter.html")).css(".project-card")
+  projects.each do |project|
+    title = project.css("h2 strong a")[0].text
+    result[title] = {}
+    result[title][:image_link] = project.css(".project-thumbnail a img")[0].attributes['src'].value
+    result[title][:description] = project.css("p")[0].text
+    result[title][:location] = project.css(".location-name")[0].text
+    result[title][:percent_funded] = project.css(".funded strong")[0].text.to_i
   end
   result
 end
-
-
-
-
-#   def get_courses
-#     self.get_page.css(".post")
-#   end
-#
-#   def make_courses
-#     self.get_courses.each do |post|
-#       course = Course.new
-#       course.title = post.css("h2").text
-#       course.schedule = post.css(".date").text
-#       course.description = post.css("p").text
-#     end
-#   end
