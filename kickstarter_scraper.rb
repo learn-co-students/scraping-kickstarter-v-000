@@ -11,10 +11,10 @@ def create_project_hash
   projects.each do |project|
     title = project.css("h2 strong a")[0].text
     result[title] = {
-      image_link: => project.css(".project-thumbnail a img")[0].attributes['src'].value
-      description: => project.css("p")[0].text
-      location: => project.css(".location-name")[0].text
-      percent_funded: => project.css(".funded strong")[0].text.to_i
+      :image_link => project.css(".project-thumbnail a img")[0].attributes['src'].value,
+      :description => project.css("p")[0].text,
+      :location => project.css(".location-name")[0].text,
+      :percent_funded => project.css(".funded strong")[0].text.to_i,
     }
   end
   result
