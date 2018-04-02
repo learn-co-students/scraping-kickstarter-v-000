@@ -27,4 +27,5 @@ title = project.css("h2.bbcard_name strong a").text
 
   # return the projects hash
   projects
+  
 end
