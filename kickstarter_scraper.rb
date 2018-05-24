@@ -12,7 +12,7 @@ def create_project_hash
   # image link: kickstarter.css("div.project-thumbnail a img").attribute("src").value
   # description: kickstarter.css("p.bbcard_blurb").text
   # location: kickstarter.css("ul.project-meta span.location-name").text
-# percent_funded: kickstarter.css("ul.project-stats li.first.funded strong").text.gsub("%","").to_i
+  # percent_funded: kickstarter.css("ul.project-stats li.first.funded strong").text.gsub("%","").to_i
 
 projects = {}
 # iterate through the projects
