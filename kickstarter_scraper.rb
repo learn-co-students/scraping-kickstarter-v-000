@@ -23,9 +23,5 @@ def create_project_hash
       :percent_funded => project.css("ul.project-stats li.first.funded strong").text.gsub("%", "").to_i
     }
   end
-
   projects
-
 end
-
-create_project_hash
