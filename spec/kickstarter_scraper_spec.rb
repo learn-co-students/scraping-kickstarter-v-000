@@ -1,3 +1,5 @@
+
+
 describe "#create_project_hash" do
 
   it "can be called on with no errors" do
@@ -40,6 +42,7 @@ describe "#create_project_hash" do
   it "each project has percentage funded listed which is an integer" do
     create_project_hash.each do |project_title, info_hash|
       expect(info_hash[:percent_funded].class).to eq(Fixnum) 
+     
     end
   end
 
