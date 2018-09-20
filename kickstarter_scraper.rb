@@ -20,7 +20,11 @@ def create_project_hash
   projects
 end 
 
-#create_project_hash
+#create_project_hash.each do |title, hash| 
+#  puts "#{title}:"
+#  hash.each {|key, value| puts "  #{key}: #{value}"}
+#  puts "\n"
+#end
 
 # projects: kickstarter.css("li.project.grid_4")
 # title: project.css("h2.bbcard_name strong a").text
