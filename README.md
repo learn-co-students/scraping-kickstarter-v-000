@@ -32,6 +32,8 @@ These individual project hashes will be collected into a larger hash called `pro
 
 In the directory of this project, you'll notice a folder called `fixtures`. Inside that folder, you'll see a file, `kickstarter.html`. If you are using the Learn IDE right click on the `kickstarter.html` file and select `Show in Finder`. Once Finder opens double click `kickstarter.html` to view the file inside your default web browser. If you are not using the Learn IDE, try open `kickstarter.html` inside your text editor and right-click anywhere on the page to select `open in browser` from the menu that appears.
 
+**NOTE**: If the `Show in Finder` or `Open in Browser` options are not available for you, you can use `httpserver`. Open the `fixtures/kickstarter.html` file inside of the browser by typing `httpserver` into the Learn IDE terminal and go to the link provided. Navigate to `fixtures/kickstarter.html` from there. 
+
 Ta-da! We're looking at a web page. For the purposes of this lab, we won't be scraping a live web page. We'll be scraping this HTML page. We're doing this for two reasons. First, because web pages change. If we assign you a lab based on material that will change, things could get really confusing. Secondly, it is common to keep data that the test suite will use to test your program in a `fixtures` directory.
 
 So, for this lab, we *don't need Open-Uri*. We're not opening a live web page.
