@@ -1,4 +1,4 @@
-puts describe "#create_project_hash" do
+describe "#create_project_hash" do
 
   it "can be called on with no errors" do
     expect {create_project_hash}.to_not raise_error
