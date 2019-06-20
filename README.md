@@ -231,6 +231,7 @@ Do you think you can figure this one out on your own? Examine the web page and
 then play around in Pry. Try to find the right selector for an individual
 project's location.
 
+
 ### Selecting the Percent Funded
 
 And last, but not least, let's try and grab the percent funded as well! Looking
