@@ -2,8 +2,8 @@
 
 ## Objectives
 
-1. Use Nokogiri to scrape an HTML document.
-2. Use scraped data to build a nested data structure.
+- Use Nokogiri to scrape an HTML document.
+- Use scraped data to build a nested data structure.
 
 ## Overview
 
@@ -30,13 +30,15 @@ each project and build a hash for each project:
 }
 ```
 
-These individual project hashes will be collected into a larger hash called `projects`.
+These individual project hashes will be collected into a larger hash called
+`projects`.
 
 ## Fixtures
 
 In the directory of this project, you'll notice a folder called `fixtures`.
 Inside that folder, you'll see a file, `kickstarter.html`. If you are using the
-Learn IDE right click on the `kickstarter.html` file and select `Show in Finder`. Once Finder opens double click `kickstarter.html` to view the file
+Learn IDE right click on the `kickstarter.html` file and select `Show in
+Finder`. Once Finder opens double click `kickstarter.html` to view the file
 inside your default web browser. If you are not using the Learn IDE, try open
 `kickstarter.html` inside your text editor and right-click anywhere on the page
 to select `open in browser` from the menu that appears.
@@ -101,13 +103,28 @@ iterate through a nested data structure, we can use the Ruby we already know to
 iterate through each of these projects and do stuff with them.
 
 Just to check our assumptions, let's add a `require 'pry'` at the top of our
-file, and add `binding.pry` after the last line. Call the `create_project_hash`
-method at the bottom of the file. Then type `ruby kickstarter_scraper.rb` into
-your terminal. This should drop us into Pry, so that we can play around.
+file, and add `binding.pry` after the last line. Add a call to the
+`create_project_hash` method at the bottom of the file.
+
+```ruby
+require "nokogiri"
+require "pry"
+
+def create_project_hash
+  html = File.read('fixtures/kickstarter.html')
+  kickstarter = Nokogiri::HTML(html)
+  binding.pry
+end
+
+create_project_hash
+```
+
+Then type `ruby kickstarter_scraper.rb` into your terminal. This should drop us
+into Pry, so that we can play around.
 
 In pry, type in:
 
-```
+```ruby
 kickstarter.css("li.project.grid_4").first
 ```
 
@@ -131,7 +148,7 @@ that project.
 
 In Pry, type:
 
-```
+```ruby
 project = _
 ```
 
@@ -158,7 +175,7 @@ identify the selector for a project's title. A bit of inspection should reveal
 that the title of each project lives in an `h2` with a class of `bbcard_name`,
 inside a `strong` and then an `a` tag. Let's check that in pry:
 
-```
+```ruby
 project.css("h2.bbcard_name strong a").text
 ```
 
@@ -180,7 +197,7 @@ Pry.
 
 In Pry, type:
 
-```
+```ruby
 project.css("div.project-thumbnail a img").attribute("src").value
 ```
 
@@ -210,7 +227,7 @@ Are you starting to see a pattern here? We click around a bit in the Chrome web
 inspector, take a stab at a CSS selector in Pry, and then keep track of that
 selector in our project file. Let's grab the description now. In Pry:
 
-```
+```ruby
 project.css("p.bbcard_blurb").text
 ```
 
@@ -237,7 +254,7 @@ And last, but not least, let's try and grab the percent funded as well! Looking
 in Chrome, it seems that this one is just a bit trickier, but only because it's
 more nested than the other ones. In Pry, type:
 
-```
+```ruby
 project.css("ul.project-stats li.first.funded strong").text
 ```
 
@@ -360,7 +377,5 @@ end
 
 We did it! Run the test suite and you should see that all of the tests are
 passing.
-
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/scraping-kickstarter' title='Scraping Kickstarter'>Scraping Kickstarter</a> on Learn.co and start learning to code for free.</p>
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/scraping-kickstarter'>Kickstarter Scraping Lab</a> on Learn.co and start learning to code for free.</p>
