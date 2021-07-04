@@ -1,0 +1,30 @@
+
+[1mFrom:[0m /home/Toni-Ty/scraping-kickstarter-v-000/kickstarter_scraper.rb @ line 12 Object#create_project_hash:
+
+     [1;34m4[0m: [32mdef[0m [1;34mcreate_project_hash[0m
+     [1;34m5[0m:   html = [1;34;4mFile[0m.read([31m[1;31m'[0m[31mfixtures/kickstarter.html[1;31m'[0m[31m[0m)
+     [1;34m6[0m:   kickstarter = [1;34;4mNokogiri[0m::HTML(html)
+     [1;34m7[0m: 
+     [1;34m8[0m: projects = {}
+     [1;34m9[0m: 
+    [1;34m10[0m: kickstarter.css([31m[1;31m"[0m[31mli.project.grid_4[1;31m"[0m[31m[0m).each [32mdo[0m |project|
+    [1;34m11[0m:   title = project.css([31m[1;31m"[0m[31mh2.bbcard_name strong a[1;31m"[0m[31m[0m).text
+ => [1;34m12[0m:   binding.pry
+    [1;34m13[0m:   projects[title.to_sym] = {}
+    [1;34m14[0m:   binding.pry
+    [1;34m15[0m: [32mend[0m
+    [1;34m16[0m: 
+    [1;34m17[0m: projects
+    [1;34m18[0m: 
+    [1;34m19[0m: 
+    [1;34m20[0m:   [1;34m# projects: kickstarter.css("li.project.grid_4")[0m
+    [1;34m21[0m:   [1;34m# project.css("h2.bbcard_name strong a").text[0m
+    [1;34m22[0m:   [1;34m# project.css("div.project-thumbnail a img").attribute("src").value[0m
+    [1;34m23[0m:   [1;34m# project.css("p.bbcard_blurb").text[0m
+    [1;34m24[0m:   [1;34m# project location below[0m
+    [1;34m25[0m:   [1;34m# project.css("ul.project_meta span.Location-name").text[0m
+    [1;34m26[0m:   [1;34m# project.css("ul.project-stats li.first.funded strong").text.gsub("%", "").to_i[0m
+    [1;34m27[0m: 
+    [1;34m28[0m: 
+    [1;34m29[0m: [32mend[0m
+
