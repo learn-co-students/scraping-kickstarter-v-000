@@ -30,3 +30,14 @@ def create_project_hash
   # return the projects hash
   projects
 end
+
+
+
+  can be called on with no errors
+  returns a hash (FAILED - 1)
+  includes at least five projects (FAILED - 2)
+  project titles point to a hash of info (FAILED - 3)
+  each project has an image link hosted on AmazonAWS (FAILED - 4)
+  each project has a description which is a string (FAILED - 5)
+  each project has a location which is a string (FAILED - 6)
+  each project has percentage funded listed which is an integer (FAILED - 7)
